@@ -9,7 +9,7 @@ export default async function handler(
 ) {
   mongo();
   try {
-    const mModel = models.hospitals || model("products", productSchema);
+    const mModel = models.products || model("products", productSchema);
     const data = await mModel.find({});
     res.status(200).json(data);
   } catch (error: any) {
