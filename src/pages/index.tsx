@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Bowlby_One } from "next/font/google";
 import Image from "next/image";
-import img from "../assets/dogBG.png";
+import img from "public/dogBG.png";
 const font = Bowlby_One({ subsets: ["latin"], weight: ["400"] });
 
 const Home = () => {
