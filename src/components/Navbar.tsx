@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="sticky flex flex-col flex-wrap items-center p-5 bg-black  w-100vw wcontainer mvwx-auto md:flex-row">
+    <div className="sticky flex flex-col flex-wrap items-center p-5 bg-black w-100vw wcontainer mvwx-auto md:flex-row">
       <a className="flex items-center mb-4 font-medium text-white title-font md:mb-0">
         <img src="" />
       </a>
@@ -11,7 +11,7 @@ export default function Navbar() {
         <a className="mr-5 hover:text-yellow-500">Fourth Link</a>
       </div>
       <button className="inline-flex items-center px-3 py-1 mt-4 bg-yellow-500 border-0 md:mt-0">
-        Sign in
+        <a href="/api/auth/login">Login</a>
       </button>
     </div>
   );

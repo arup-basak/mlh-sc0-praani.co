@@ -18,7 +18,7 @@ const Home = () => {
         initial={{ opacity: 0 }}
         className={`${font.className} absolute inset-x-0 bottom-[35rem] text-[15rem] text-center`} // Adjusted bottom and font size
       >
-        PETMED
+        FURTASTIC
       </motion.div>
     </div>
   );
