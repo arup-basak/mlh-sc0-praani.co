@@ -5,8 +5,7 @@ export default function Card(props: {
   cause3: string;
 }) {
   const classes =
-    "rounded-[39px] w-56 m-4 relative top-[-69vh] h-72 bg-pink-1 object-cover transition duration-500 cursor-pointer  hover:scale-110 " +
-    
+    "rounded-[39px] w-56 m-4 relative top-[-69vh] h-72 bg-pink-1 object-cover transition duration-500 cursor-pointer  hover:scale-110 ";
 
   const title = props.title;
   const cause1 = props.cause1;
