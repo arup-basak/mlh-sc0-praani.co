@@ -1,9 +1,10 @@
 import React from 'react'
+import Heading from '@/components/Heading'
 
 const Home = () => {
   return (
     <>
-      Home
+      <Heading text='This is Heading' />
     </>
   )
 }
