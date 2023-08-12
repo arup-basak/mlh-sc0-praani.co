@@ -58,7 +58,7 @@ function Page() {
                         <p className="text-gray-600">{data.productName}</p>
                         <p className="text-green-600">${data.price}</p>
                         <p className="text-gray-800">{data.description}</p>
-                        <Button text='Buy Now' onClick={() => { }} />
+                        <Button text='Buy Now' onClick={() => { router.push(data.paymentLink) }} />
                         <Button text='Add To Cart' onClick={() => { }} />
                     </div>
                 </div>
