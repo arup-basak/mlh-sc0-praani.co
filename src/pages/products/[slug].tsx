@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import ProductInterface from '@/interface/product.interface';
 import Image from 'next/image';
-
-const API_URL = '/api/product';
+import Button from '@/components/Button';
+import Head from 'next/head';
 
 function Page() {
     const router = useRouter();
@@ -15,7 +15,7 @@ function Page() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const request = await axios.post(API_URL, { productId: router.query.slug });
+                const request = await axios.post('/api/product', { productId: router.query.slug });
                 const jsonData = request.data;
                 setData(jsonData);
                 setLoading(false);
@@ -39,18 +39,30 @@ function Page() {
     }
 
     return (
-        <div>
-            <Image
-                src={`https://ik.imagekit.io/kftm0sihh/${data.imageFileName}`}
-                alt={data.title}
-                height={160}
-                width={160}
-                layout="fixed"
-            />
-            <div>{data.title}</div>
-            <div>{data.productName}</div>
-            <div>{data.price}</div>
-            <div>{data.description}</div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <Head>
+                <title>{data.title}</title>
+            </Head>
+            <div className="max-w-xl bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center">
+                    <div className="mr-4">
+                        <Image
+                            src={`https://ik.imagekit.io/kftm0sihh/${data.imageFileName}`}
+                            alt={data.title}
+                            height={160}
+                            width={160}
+                        />
+                    </div>
+                    <div>
+                        <h1 className="text-2xl font-semibold">{data.title}</h1>
+                        <p className="text-gray-600">{data.productName}</p>
+                        <p className="text-green-600">${data.price}</p>
+                        <p className="text-gray-800">{data.description}</p>
+                        <Button text='Buy Now' onClick={() => { }} />
+                        <Button text='Add To Cart' onClick={() => { }} />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
