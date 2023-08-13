@@ -49,7 +49,7 @@ const Navbar = () => {
             <Link href="/products" className="hover:text-yellow-500">Products</Link>
             <Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link>
             <Link href="/about" className="hover:text-yellow-500">About us</Link>
-            <Link href="/about" className="hover:text-yellow-500">Hospitals</Link>
+            <Link href="/hospitals" className="hover:text-yellow-500">Hospitals</Link>
             <div className="flex items-center space-x-2">
               <FaCoins className="hover:text-yellow-500" />
               <span className="hover:text-yellow-500 cursor-pointer">{coin} Coins</span>
