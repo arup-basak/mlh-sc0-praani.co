@@ -7,11 +7,29 @@ import HospitalInterface from '@/interface/hospital.interface';
 const Hospital = () => {
     const [data, setData] = useState<any[]>()
     const [isLoading, setLoading] = useState(true);
-    const location = [12, 13];
+    const [latitude, setLatitude] = useState(0);
+    const [longitude, setLongitude] = useState(0);
+
+    useEffect(() => {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    setLatitude(position.coords.latitude)
+                    setLongitude(position.coords.longitude)
+                },
+                (error) => {
+                    console.error("Error getting geolocation:", error);
+                }
+            );
+        } else {
+            console.log("Geolocation is not available in this browser.");
+        }
+    }, []);
+
     useEffect(() => {
         const fetchData = async () => {
             const resp = await axios.post('/api/hospitals', {
-                position: location
+                position: [latitude, longitude]
             })
             if (resp.data) {
                 const hospitals = resp.data
