@@ -44,23 +44,26 @@ function Page() {
             <Head>
                 <title>{data.title}</title>
             </Head>
-            <div className="max-w-xl bg-white p-6 rounded-lg shadow-md">
-                <div className="flex items-center">
-                    <div className="mr-4">
+            <div className="max-w-4xl bg-white p-8 rounded-lg shadow-lg mx-4 md:mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="flex-shrink-0">
                         <Image
                             src={`https://ik.imagekit.io/kftm0sihh/${data.imageFileName}`}
                             alt={data.title}
-                            height={160}
-                            width={160}
+                            height={400}
+                            width={400}
+                            className="rounded-lg"
                         />
                     </div>
                     <div>
-                        <h1 className="text-2xl font-semibold">{data.title}</h1>
-                        <p className="text-gray-600">{data.productName}</p>
-                        <p className="text-green-600">${data.price}</p>
+                        <h1 className="text-3xl font-semibold mb-2">{data.title}</h1>
+                        <p className="text-gray-600 mb-2">{data.productName}</p>
+                        <p className="text-green-600 text-xl font-semibold mb-4">${data.price}</p>
                         <p className="text-gray-800">{data.description}</p>
-                        <Button text='Buy Now' onClick={() => { router.push(data.paymentLink) }} />
-                        <Button text='Add To Cart' onClick={() => { }} />
+                        <div className="mt-4 flex space-x-4">
+                            <Button text='Buy Now' onClick={() => { router.push(data.paymentLink) }} />
+                            <Button text='Add To Cart' onClick={() => { }} />
+                        </div>
                     </div>
                 </div>
             </div>
