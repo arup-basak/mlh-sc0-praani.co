@@ -37,7 +37,8 @@ const Products = () => {
             <Head>
                 <title>Our Products</title>
             </Head>
-            <div className='grid grid-cols-4 m-auto w-3/4 -z-10 bg-[#fdfcdc]'>
+            <div className = 'bg-[#fdfcdc]'>
+            <div className='grid grid-cols-4 m-auto w-3/4 -z-10 '>
                 {data.map((item, index) => (
                     <ProductCard
                         key={index}
@@ -47,6 +48,7 @@ const Products = () => {
                         id={String(item.productId)}
                     />
                 ))}
+            </div>
             </div>
         </>
     );
