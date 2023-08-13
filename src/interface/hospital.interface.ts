@@ -3,5 +3,6 @@ export default interface Hospital {
     location: [string, string],
     availableBeds: number,
     contact: string,
-    email?: string
+    email?: string,
+    address: string
 }

@@ -1,32 +1,3 @@
-// import type { NextApiRequest, NextApiResponse } from 'next'
-// import hospitalSchema from '@/schemas/hospital.schema'
-// import { model, models } from 'mongoose'
-// import mongo from '@/libs/mongo'
-
-// export default async function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse<any>
-// ) {
-//   mongo();
-
-//   const location = [req.body.position[0], req.body.position[1]]; // Access user location
-
-//   try {
-//     const mModel = models.hospitals || model("hospitals", hospitalSchema)
-//     const data = await mModel.find({})
-//     res.status(200).json(data)
-//   } catch (error: any) {
-//     console.log(error)
-//     res.status(500).json({ error: 'Internal server error' })
-//   }
-// }
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next'
 import hospitalSchema from '@/schemas/hospital.schema'
 import { model, models } from 'mongoose'
@@ -55,23 +26,31 @@ export default async function handler(
 ) {
   mongo();
 
-  const userLocation = {
-    latitude: req.body.position[0],
-    longitude: req.body.position[1]
-  };
-
   try {
+    const userLocation = {
+      latitude: req.body.position[0], // Make sure req.body.position is an array with at least 2 elements
+      longitude: req.body.position[1]
+    };
+
     const mModel = models.hospitals || model("hospitals", hospitalSchema)
     const allHospitals = await mModel.find({})
 
+    // console.log(allHospitals)
+
     // Calculate distances and sort hospitals based on distance
-    const hospitalsWithDistances = allHospitals.map(hospital => ({
-      ...hospital.toObject(),
-      distance: haversineDistance(
-        userLocation.latitude, userLocation.longitude,
-        hospital.position[0], hospital.position[1]
-      )
-    }));
+    const hospitalsWithDistances = allHospitals.map(hospital => {
+      if (hospital.location && hospital.location.length >= 2) {
+        return {
+          ...hospital.toObject(),
+          distance: haversineDistance(
+            userLocation.latitude, userLocation.longitude,
+            hospital.location[0], hospital.location[1]
+          )
+        };
+      }
+      return hospital;
+    });
+
     hospitalsWithDistances.sort((a, b) => a.distance - b.distance);
 
     // Get the five nearest hospitals
