@@ -1,5 +1,6 @@
-import { Dela_Gothic_One } from "next/font/google";
-const font = Dela_Gothic_One({ subsets: ["latin"], weight: ["400"] });
+import { Abril_Fatface } from "next/font/google";
+
+const font = Abril_Fatface({ subsets: ["latin"], weight: ["400"] });
 
 export default function About() {
   const teamMembers = [
