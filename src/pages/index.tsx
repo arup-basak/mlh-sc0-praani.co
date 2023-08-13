@@ -45,6 +45,8 @@ const Home = () => {
       </section>
       <section className="bg-[#fdfcdc]">
         <div className="w-full lg:w-7/12 text-lg lg:text-xl py-5 px-4 lg:px-8">
+          <Heading 
+          text="Emergency Aid for All!"/>
           <div className="py-2">
             Welcome to PetMed, where your pets' health matters. Our services cater to cats, dogs, fish, and birds.
           </div>
