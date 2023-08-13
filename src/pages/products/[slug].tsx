@@ -5,6 +5,7 @@ import ProductInterface from '@/interface/product.interface';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import Head from 'next/head';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 function Page() {
     const router = useRouter();
@@ -31,7 +32,7 @@ function Page() {
     }, [router.query.slug, loading]);
 
     if (loading) {
-        return <>Loading...</>;
+        return <LoadingSpinner />
     }
 
     if (!data) {

@@ -3,6 +3,7 @@ import axios from 'axios';
 import ProductInterface from '@/interface/product.interface';
 import ProductCard from '@/components/ProductCard';
 import Head from 'next/head';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 const Products = () => {
     const [data, setData] = useState<ProductInterface[]>([]); // Initialize as an empty array
@@ -28,7 +29,7 @@ const Products = () => {
     }, []); // Provide an empty dependency array
 
     if (isLoading) {
-        return <>Loading...</>;
+        return <LoadingSpinner />
     }
 
     return (

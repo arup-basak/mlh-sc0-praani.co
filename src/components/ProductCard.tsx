@@ -25,7 +25,7 @@ const ProductCard: React.FC<Props> = (props: Props) => {
         <h1 className="py-2 text-lg font-semibold text-center">₹{props.price.toFixed(2)}</h1>
         <div className="mt-4 flex justify-center space-x-4">
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg" onClick={() => {push(`/products/${props.id}`)}}>
-            About This Product
+            About This  
           </button>
           <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
             Add to Cart
