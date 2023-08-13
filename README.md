@@ -46,6 +46,9 @@ Alright, pet lovers, brace yourselves! 🐕🐾 We present to you the **Status C
 
 Oh no, furry emergencies? 😱 Fear not! Our platform's got your back. Reach out for emergency pet assistance – connect with veterinary pros pronto! Real-time chats and support to the rescue. 🚑🩺
 
+![image](https://github.com/arup-basak/mlh-encode-1010/assets/108953684/1e128206-71f3-4d46-9275-fbc49339c872)
+
+
 ### Online Store
 
 Shop till you drop – for your pets! 🛍️ Our online store's a paradise for pet product lovers. From nom-nom-worthy food to cozy cages and accessories, we've got it all. Spoil your pets silly! 🐾💖
