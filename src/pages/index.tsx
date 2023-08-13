@@ -39,7 +39,7 @@ const Home = () => {
               opacity: 1,
             }}
           >
-            <Heading text="FURTASTIC" className="text-[3rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem]" />
+            <Heading text="PRAANI" className="text-[3rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem]" />
           </motion.span>
         </div>
       </section>
