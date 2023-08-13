@@ -1,4 +1,4 @@
-# [title]
+# [Praani]
 
 Hey there! 🐾 Welcome to our **StatusCode0 Pet Healthcare Project**! We're totally stoked to have you here. 🎉 Let's dive into this pawsome project that's all about keeping our furry friends healthy and happy. 🐶🐱
 
@@ -37,6 +37,11 @@ Alright, pet lovers, brace yourselves! 🐕🐾 We present to you the **Status C
 
 ## Features
 
+### Sign-Up Using Oauth
+
+![image](https://github.com/arup-basak/mlh-encode-1010/assets/108953684/57c422ea-eb54-4096-a305-22b8bf19ec53)
+
+
 ### Emergency Pet Assistance
 
 Oh no, furry emergencies? 😱 Fear not! Our platform's got your back. Reach out for emergency pet assistance – connect with veterinary pros pronto! Real-time chats and support to the rescue. 🚑🩺
@@ -44,6 +49,10 @@ Oh no, furry emergencies? 😱 Fear not! Our platform's got your back. Reach out
 ### Online Store
 
 Shop till you drop – for your pets! 🛍️ Our online store's a paradise for pet product lovers. From nom-nom-worthy food to cozy cages and accessories, we've got it all. Spoil your pets silly! 🐾💖
+![image](https://github.com/arup-basak/mlh-encode-1010/assets/108953684/4e5280ac-de5a-4bc1-90cd-774b453e2fed)
+
+
+
 
 ### Incentive Program
 
