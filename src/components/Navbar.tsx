@@ -51,8 +51,8 @@ const Navbar = () => {
             <Link href="/about" className="hover:text-yellow-500">About us</Link>
             <Link href="/about" className="hover:text-yellow-500">Hospitals</Link>
             <div className="flex items-center space-x-2">
-              <FaCoins className="text-white" />
-              <span className="text-white">{coin} Coins</span>
+              <FaCoins className="hover:text-yellow-500" />
+              <span className="hover:text-yellow-500 cursor-pointer">{coin} Coins</span>
             </div>
           </div>
           {user ? (
