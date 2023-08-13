@@ -12,8 +12,10 @@ const Products = () => {
             try {
                 const response = await axios.get('/api/products/'); // Use 'get' instead of 'post'
                 const jsonData = response.data;
-                setData(jsonData);
-                setLoading(false);
+                if(response.status === 200) {
+                    setData(jsonData);
+                    setLoading(false);
+                }
             } catch (error) {
                 console.error('Error fetching data:', error);
                 setLoading(false); // Handle error loading state

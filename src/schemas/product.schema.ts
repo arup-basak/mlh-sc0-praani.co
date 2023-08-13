@@ -4,15 +4,16 @@ const productSchema = new mongoose.Schema({
   productName: {
     type: String,
     required: false
-},
-title:{
+  },
+  title: {
+    type: String,
     required: true,
   },
-  producId: {
+  productId: {
     type: Number,
     required: true,
   },
-  producttype: {
+  productType: {
     type: String,
     enum: ["toys", "foods", "medicine"],
     required: true,
