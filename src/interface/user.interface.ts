@@ -10,4 +10,7 @@ interface User {
     sid: string;
     sub: string;
     updated_at: string;
+    loginStreak: number,
+    lastLogin: string,
+    coins: number
 }
