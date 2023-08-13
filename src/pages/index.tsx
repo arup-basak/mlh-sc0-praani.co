@@ -18,7 +18,7 @@ const Home = () => {
           style={{
             backgroundImage: `url(${bgImg.src})`,
             width: '100%',
-            minHeight: '80vh',
+            minHeight: '90vh',
             backgroundSize: 'cover',
             display: 'flex',
             alignItems: 'center',
