@@ -4,6 +4,7 @@ import Image from 'next/image';
 interface Props {
   heading: string;
   price: number;
+  imgName: string
 }
 
 const ProductCard: React.FC<Props> = (props: Props) => {
@@ -11,7 +12,7 @@ const ProductCard: React.FC<Props> = (props: Props) => {
     <div className="m-4 relative bg-pink-100 rounded-xl overflow-hidden shadow-md transform hover:scale-105 transition-transform">
       <div className="flex flex-col items-center p-4">
         <Image
-          src="/hero.png"
+          src={`https://ik.imagekit.io/kftm0sihh/${props.imgName}`}
           className="bg-red-500 rounded-xl"
           alt="Hero Icon"
           width={160}
