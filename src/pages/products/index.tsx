@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductInterface from '@/interface/product.interface';
 import ProductCard from '@/components/ProductCard';
+import Head from 'next/head';
 
 const Products = () => {
     const [data, setData] = useState<ProductInterface[]>([]); // Initialize as an empty array
@@ -12,7 +13,7 @@ const Products = () => {
             try {
                 const response = await axios.get('/api/products/'); // Use 'get' instead of 'post'
                 const jsonData = response.data;
-                if(response.status === 200) {
+                if (response.status === 200) {
                     setData(jsonData);
                     setLoading(false);
                 }
@@ -31,15 +32,21 @@ const Products = () => {
     }
 
     return (
-        <div className='grid grid-cols-4 m-auto w-3/4'>
-            {data.map((item, index) => (
-                <ProductCard
-                    key={index}
-                    heading={item.productName}
-                    price={item.price}
-                />
-            ))}
-        </div>
+        <>
+            <Head>
+                <title>Our Products</title>
+            </Head>
+            <div className='grid grid-cols-4 m-auto w-3/4 -z-10'>
+                {data.map((item, index) => (
+                    <ProductCard
+                        key={index}
+                        heading={item.productName}
+                        price={item.price}
+                        imgName={item.imageFileName}
+                    />
+                ))}
+            </div>
+        </>
     );
 };
 
