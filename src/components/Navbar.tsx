@@ -1,18 +1,46 @@
-export default function Navbar() {
+import Link from "next/link";
+import { useUser } from '@auth0/nextjs-auth0/client';
+import account_Icon from 'public/account.svg'
+import Image from "next/image";
+import { FaUser } from 'react-icons/fa'
+
+const Navbar = () => {
+  const { user, error, isLoading } = useUser();
+  console.log(user)
+
   return (
-    <div className="sticky flex flex-col flex-wrap items-center p-5 bg-black w-100vw wcontainer mvwx-auto md:flex-row">
-      <a className="flex items-center mb-4 font-medium text-white title-font md:mb-0">
-        <img src="" />
-      </a>
-      <div className="items-center justify-center text-white text wrap backflex md:ml-auto md:mr-auto">
-        <a className="mr-5 hover:text-yellow-500">First Link</a>
-        <a className="mr-5 hover:text-yellow-500">Second Link</a>
-        <a className="mr-5 hover:text-yellow-500">Third Link</a>
-        <a className="mr-5 hover:text-yellow-500">Fourth Link</a>
-      </div>
-      <button className="inline-flex items-center px-3 py-1 mt-4 bg-yellow-500 border-0 md:mt-0">
-        <a href="/api/auth/login">Login</a>
-      </button>
-    </div>
+    <div className="sticky top-0 bg-black">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4 md:py-6">
+          <Link href="/">
+            <div className="flex items-center text-white">
+              <img src="" alt="Logo" className="h-8" />
+            </div>
+          </Link>
+          <div className="hidden md:flex space-x-6 text-white">
+            <Link href="/" className="hover:text-yellow-500">Home</Link>
+            <Link href="/products" className="hover:text-yellow-500">Products</Link>
+            <Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link>
+          </div>
+          {
+            user ? (
+              <div className="text-white">
+                <FaUser />
+              </div>
+            ) : (
+              <button>
+                <a
+                  href="/api/auth/login"
+                  className="inline-block px-4 py-2 bg-yellow-500 text-black rounded-lg">
+                  Login
+                </a>
+              </button>
+            )
+          }
+        </div>
+      </div >
+    </div >
   );
 }
+
+export default Navbar

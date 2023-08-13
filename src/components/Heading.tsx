@@ -10,7 +10,7 @@ interface Props {
 
 const Heading = ({text, className}: Props) => {
     return (
-        <h1 className={`${font.className} text-7xl ${className}`}>
+        <h1 className={`${font.className} text-7xl ${className} h-fit w-fit`}>
             {text}
         </h1>
     )
