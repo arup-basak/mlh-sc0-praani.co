@@ -14,7 +14,7 @@ export default async function handler(
     try {
         const mModel = models.users || model("users", userSchema);
 
-        const resp = await mModel.findOneAndUpdate(
+        await mModel.findOneAndUpdate(
             { sid: sid },
             { $inc: { coins: value } },
             { new: true }
@@ -22,6 +22,6 @@ export default async function handler(
         res.status(200).json({ response: true });
     } catch (error: any) {
         console.log(error);
-        res.status(500).json({ error: "Internal server error" });
+        res.status(500).json({ response: false });
     }
 }
