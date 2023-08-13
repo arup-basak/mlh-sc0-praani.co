@@ -40,7 +40,7 @@ const Navbar = () => {
               className="scale-150"
             />
             <span className="mx-3 font-semibold text-2xl">
-              LogoText
+              Praani
             </span>
             {/* <img src="" alt="Logo" className="h-8" /> */}
           </Link>
