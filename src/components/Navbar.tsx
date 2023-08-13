@@ -38,6 +38,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-yellow-500">Home</Link>
             <Link href="/products" className="hover:text-yellow-500">Products</Link>
             <Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link>
+            <Link href="/about" className="hover:text-yellow-500">About us</Link>
           </div>
           {user ? (
             <div className="text-white">

@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <section className="text-white bg-black ">
       <div className="flex justify-center">
-        <div className="grid grid-cols-3 p-2 max-w-screen-5/12">
+        <div className="grid grid-cols-3 p-2 w-8/12">
           {buttons.map((item, index) => (
             <Button key={index} text={item.text} url={item.url} />
           ))}
