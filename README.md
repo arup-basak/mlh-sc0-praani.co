@@ -52,7 +52,8 @@ Oh no, furry emergencies? 😱 Fear not! Our platform's got your back. Reach out
 ### Online Store
 
 Shop till you drop – for your pets! 🛍️ Our online store's a paradise for pet product lovers. From nom-nom-worthy food to cozy cages and accessories, we've got it all. Spoil your pets silly! 🐾💖
-![image](https://github.com/arup-basak/mlh-encode-1010/assets/108953684/4e5280ac-de5a-4bc1-90cd-774b453e2fed)
+![image](https://github.com/arup-basak/mlh-encode-1010/assets/108953684/c821d695-bfbd-4d32-a25c-7fa3930198b6)
+
 
 
 
