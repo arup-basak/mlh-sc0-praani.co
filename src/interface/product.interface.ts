@@ -6,4 +6,5 @@ export default interface Product {
   description?: string;
   title: string;
   imageFileName: string;
+  paymentLink: string;
 }
