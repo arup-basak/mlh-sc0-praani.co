@@ -14,7 +14,6 @@ const Navbar = () => {
       try {
         // console.log(user)
         const resp = await axios.post('/api/user', { ...user });
-        // console.log()
         setCoin(resp.data._doc.coins);
       } catch (error) {
         console.error("Error fetching user data:", error);

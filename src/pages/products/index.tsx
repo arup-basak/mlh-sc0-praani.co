@@ -43,6 +43,7 @@ const Products = () => {
                         heading={item.productName}
                         price={item.price}
                         imgName={item.imageFileName}
+                        id={String(item.productId)}
                     />
                 ))}
             </div>

@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema({
   picture: { type: String, required: false },
   sid: { type: String, required: true },
   sub: { type: String, required: true },
-//   updated_at: { type: String, required: false },
   loginStreak: { type: Number, required: true, default: 0 },
   lastLogin: { type: Date, required: true, default: Date.now() },
   coins: { type: Number, required: true, default: 0 },
