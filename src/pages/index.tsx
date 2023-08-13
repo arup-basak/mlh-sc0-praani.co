@@ -48,10 +48,10 @@ const Home = () => {
           <Heading 
           text="Emergency Aid for All!" className="my-2"/>
           <div className="py-2">
-            Welcome to PetMed, where your pets' health matters. Our services cater to cats, dogs, fish, and birds.
+            Welcome to PetMed, where your pets&apos; health matters. Our services cater to cats, dogs, fish, and birds.
           </div>
           <div className="py-2">
-            Got a pet emergency on your hands? Worry not! We've got emergency ambulance services and hospital bookings based on your live location.
+            Got a pet emergency on your hands? Worry not! We&apos;ve got emergency ambulance services and hospital bookings based on your live location.
           </div>
           <div className="py-2">
             Dive into our services including hospitals, pathology, and a dedicated store. Sign up and access your profile to make the most of PetMed.

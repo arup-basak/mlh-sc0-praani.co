@@ -61,11 +61,11 @@ const Navbar = () => {
             </div>
           ) : (
             <button>
-              <a
+              <Link
                 href="/api/auth/login"
                 className="inline-block px-4 py-2 bg-white text-black rounded-lg">
                 Login
-              </a>
+              </Link>
             </button>
           )}
         </div>
