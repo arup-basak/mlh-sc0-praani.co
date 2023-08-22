@@ -1,4 +1,4 @@
-# [Praani]
+# Praani
 
 Hey there! 🐾 Welcome to our **StatusCode0 Pet Healthcare Project**! We're totally stoked to have you here. 🎉 Let's dive into this pawsome project that's all about keeping our furry friends healthy and happy. 🐶🐱
 
